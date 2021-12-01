@@ -7,7 +7,7 @@ require 'cucumber/rake/task'
 task 'default' => ['run']
 
 task :run do
-  ruby 'src/PacketLocator.rb'
+  ruby 'src/AnimeCitation.rb'
 end
 
 task :unit_test do
