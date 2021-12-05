@@ -31,7 +31,7 @@ end
 
 Then('there should be a database file called {string}') do |string|
   @output = `cat ./#{string}`
-  expect(@output).not_to include('No such file or directory')
+  expect(@output).not_to include('No such file or directory'.to_s)
 end
 
 Then('the database should contain no record') do
