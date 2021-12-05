@@ -7,11 +7,11 @@ require 'cucumber/rake/task'
 task 'default' => ['run']
 
 task :run do
-  ruby 'src/domain_observer.rb'
+  puts `ruby ./src/domain_observer.rb -s`
 end
 
 task :unit_test do
-  ruby 'test/TestPacketLocator.rb'
+  Dir['test/**/*.rb'].each { |s| ruby s }
 end
 
 task :acceptation_test do
