@@ -13,7 +13,7 @@ Feature: Delete a domain from the track list
   Scenario Outline: Database contains the described record
     Given the database contains no tracked domain
     When the app is called with the flag : "<flag> example.com"
-    Then the return code of the script should be 26
+    Then the return code of the script should be 29
 
     Examples:
       | flag     |

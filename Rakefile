@@ -7,7 +7,7 @@ require 'cucumber/rake/task'
 task 'default' => ['run']
 
 task :run do
-  ruby 'src/AnimeCitation.rb'
+  ruby 'src/domain_observer.rb'
 end
 
 task :unit_test do

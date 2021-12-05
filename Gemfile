@@ -2,11 +2,13 @@
 
 source 'https://rubygems.org'
 
-gem 'rspec-expectations'
-gem 'rspec-core'
+gem 'activerecord'
 gem 'bundler'
 gem 'cucumber'
+gem 'database_cleaner'
 gem 'minitest'
 gem 'rake'
+gem 'rspec-core'
+gem 'rspec-expectations'
 gem 'rubocop'
-
+gem 'sqlite3'
