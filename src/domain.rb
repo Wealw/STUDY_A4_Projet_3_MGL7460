@@ -2,11 +2,13 @@
 
 require 'active_record'
 
+# Initialize connection with the database
 ActiveRecord::Base.establish_connection(
   adapter: 'sqlite3',
   database: './domain-observer.sqlite'
 )
 
+# Create table on an empty database
 suppress(ActiveRecord::StatementInvalid) do
   ActiveRecord::Schema.define(version: 1.0) do
     self.verbose = false

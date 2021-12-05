@@ -3,6 +3,7 @@
 require 'optparse'
 require './src/domain_helper'
 
+# Handle flags given to the script
 OptionParser.new do |parser|
   parser.on('-a', '--add=DOMAIN') do |domain|
     DomainHelper.create_domain domain

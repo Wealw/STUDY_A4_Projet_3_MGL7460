@@ -6,6 +6,7 @@ require 'uri'
 
 # Helper for Domain
 class DomainHelper
+  # Act as an interface for saving fqdn to the database
   def self.create_domain(domain)
     Domain.create(fqdn: domain)
     puts "The domain #{domain} was added to the tracking database."
@@ -14,6 +15,7 @@ class DomainHelper
     exit(29)
   end
 
+  # Act as an interface for deleting fqdn from the database
   def self.delete_domain(domain)
     raise ActiveRecord::StatementInvalid unless Domain.delete(Domain.find_by(fqdn: domain)) != 0
 
@@ -23,6 +25,7 @@ class DomainHelper
     exit(29)
   end
 
+  # Act as an interface to retrieve fqdn from the database and analyse them
   def self.analyse_domains
     Domain.all.each do |domain|
       raise TypeError unless domain.is_a? Domain
@@ -34,6 +37,7 @@ class DomainHelper
     end
   end
 
+  # Take a fqdn and associated json data and print it
   def self.analyse_from_json(domain, json)
     raise TypeError unless domain.is_a? Domain
 
