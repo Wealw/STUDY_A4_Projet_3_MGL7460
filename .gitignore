@@ -123,3 +123,5 @@ fabric.properties
 /dataSources/
 /dataSources.local.xml
 /dataSources.xml
+
+./domain-observer.sqlite
